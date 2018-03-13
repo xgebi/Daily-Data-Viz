@@ -1,0 +1,47 @@
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+svg {
+  max-height: 70vh;
+  margin: 2rem auto;
+}
+
+.orange {
+  fill:#ff4f00;
+}
+
+.green {
+  fill:#d2ffd2;
+}
+
+.purple {
+  fill:#d600ff;
+}
+.yellow {
+  fill:#fff200;
+}
+.grey-darkest {
+  fill: rgb(74, 74, 74);
+}
+
+.grey-medium {
+  fill: rgb(135, 135, 135);
+}
+
+.grey-lightest {
+  fill: rgb(157, 157, 157);
+}
+
+.grey + text {
+  fill: rgb(186, 186, 186);
+}
+
+p {
+  max-width: 44ch;
+  margin: 0 auto;
+}

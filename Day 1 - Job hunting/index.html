@@ -2,43 +2,11 @@
 <html>
   <head>
     <title>Day 1 - Job hunting stats</title>
-    <style>
-      svg {
-        max-height: 90vh;
-      }
-
-      .orange {
-        fill:#ff4f00;
-      }
-
-      .green {
-        fill:#d2ffd2;
-      }
-
-      .purple {
-        fill:#d600ff;
-      }
-      .yellow {
-        fill:#fff200;
-      }
-      .grey-darkest {
-        fill: rgb(74, 74, 74);
-      }
-
-      .grey-medium {
-        fill: rgb(135, 135, 135);
-      }
-
-      .grey-lightest {
-        fill: rgb(157, 157, 157);
-      }
-
-      .grey + text {
-        fill: rgb(186, 186, 186);
-      }
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
   </head>
   <body>
+    <h1>Day 1 - Job Hunting</h1>
     <svg 
       width="100%" 
       height="100%" 
@@ -50,6 +18,8 @@
       xmlns:serif="http://www.serif.com/" 
       style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"
     >
+      <title>From recruiters to accepting a job</title>
+      <desc>Four circles. The biggest represents 47 contacts with recruiters, second biggest represents 4 in-person interviews, third biggest 2 offered jobs and the smallest 1 accepted offer.</desc>
       <circle id="contacts" cx="400" cy="400" r="400" class="orange"/>
       <text x="806.281px" y="171.929px" style="font-family:'Raleway-Regular', 'Raleway', sans-serif;font-size:20px;">47 contacts with recruiters</text>
 
@@ -63,8 +33,11 @@
       <text x="872.881px" y="371.795px" style="font-family:'Raleway-Regular', 'Raleway', sans-serif;font-size:20px;">1 accepted</text>
       </g>
     </svg>
+    <p>
+      I admit I was picky during the last job hunting event because I didn't wanted "just" a job. I wanted an interesting project as well.
+    </p>
   </body>
-  <script src="../d3.v5.min.js" type="application/javascript"></script>
+  <script src="https://d3js.org/d3.v5.min.js" type="application/javascript"></script>
   <script>
     var contactsCirle = d3.select("#contacts");
     var interviewsCircle = d3.select("#interviews");
