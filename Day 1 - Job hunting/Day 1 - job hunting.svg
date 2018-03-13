@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 
+  width="100%" 
+  height="100%" 
+  viewBox="0 0 1100 800" 
+  version="1.1" 
+  xmlns="http://www.w3.org/2000/svg" 
+  xmlns:xlink="http://www.w3.org/1999/xlink" 
+  xml:space="preserve" 
+  xmlns:serif="http://www.serif.com/" 
+  style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"
+>
+  <g id="contacts">
+    <circle cx="400" cy="400" r="400" style="fill:#ff4f00;"/>
+    <text x="806.281px" y="171.929px" style="font-family:'Raleway-Regular', 'Raleway', sans-serif;font-size:20px;">47 contacts with recruiters</text>
+  </g>
+  <g id="interviews">
+    <circle cx="400" cy="765.957" r="34.043" style="fill:#d2ffd2;"/>
+    <text x="841.52px" y="238.479px" style="font-family:'Raleway-Regular', 'Raleway', sans-serif;font-size:20px;">4 interviews at companies</text>
+  </g>
+  <g id="offers">
+    <circle cx="400" cy="782.979" r="17.021" style="fill:#d600ff;"/>
+    <text x="862.921px" y="307.368px" style="font-family:'Raleway-Regular', 'Raleway', sans-serif;font-size:20px;">2 oﬀers</text></g>
+  <g id="accepted">
+    <circle cx="400" cy="791.489" r="8.511" style="fill:#fff200;"/>
+    <text x="872.881px" y="371.795px" style="font-family:'Raleway-Regular', 'Raleway', sans-serif;font-size:20px;">1 accepted</text>
+  </g>
+</svg>

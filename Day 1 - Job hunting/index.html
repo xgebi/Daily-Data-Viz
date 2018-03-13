@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Day 1 - Job hunting stats</title>
+    <style>
+      svg {
+        max-height: 90vh;
+      }
+
+      .orange {
+        fill:#ff4f00;
+      }
+
+      .green {
+        fill:#d2ffd2;
+      }
+
+      .purple {
+        fill:#d600ff;
+      }
+      .yellow {
+        fill:#fff200;
+      }
+      .grey-darkest {
+        fill: rgb(74, 74, 74);
+      }
+
+      .grey-medium {
+        fill: rgb(135, 135, 135);
+      }
+
+      .grey-lightest {
+        fill: rgb(157, 157, 157);
+      }
+
+      .grey + text {
+        fill: rgb(186, 186, 186);
+      }
+    </style>
+  </head>
+  <body>
+    <svg 
+      width="100%" 
+      height="100%" 
+      viewBox="0 0 1100 800" 
+      version="1.1" 
+      xmlns="http://www.w3.org/2000/svg" 
+      xmlns:xlink="http://www.w3.org/1999/xlink" 
+      xml:space="preserve" 
+      xmlns:serif="http://www.serif.com/" 
+      style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"
+    >
+      <circle id="contacts" cx="400" cy="400" r="400" class="orange"/>
+      <text x="806.281px" y="171.929px" style="font-family:'Raleway-Regular', 'Raleway', sans-serif;font-size:20px;">47 contacts with recruiters</text>
+
+      <circle id="interviews" cx="400" cy="765.957" r="34.043" class="green"/>
+      <text x="841.52px" y="238.479px" style="font-family:'Raleway-Regular', 'Raleway', sans-serif;font-size:20px;">4 interviews at companies</text>
+
+      <circle id="offers" cx="400" cy="782.979" r="17.021" class="purple"/>
+      <text x="862.921px" y="307.368px" style="font-family:'Raleway-Regular', 'Raleway', sans-serif;font-size:20px;">2 offers</text>
+
+      <circle id="accepted" cx="400" cy="791.489" r="8.511" class="yellow"/>
+      <text x="872.881px" y="371.795px" style="font-family:'Raleway-Regular', 'Raleway', sans-serif;font-size:20px;">1 accepted</text>
+      </g>
+    </svg>
+  </body>
+  <script src="../d3.v5.min.js" type="application/javascript"></script>
+  <script>
+    var contactsCirle = d3.select("#contacts");
+    var interviewsCircle = d3.select("#interviews");
+    var offersCirle = d3.select("#offers");
+    var acceptedCircle = d3.select("#accepted");
+    
+    contactsCirle
+      .on("mouseover", handleMouseOverContacts)
+      .on("mouseout", handleMouseOutContacts);
+      d3.select("#contacts + text")
+      .on("mouseover", handleMouseOverContacts)
+      .on("mouseout", handleMouseOutContacts);
+
+    function handleMouseOverContacts(d, i) {  // Add interactivity
+      // Use D3 to select element, change color and size
+      interviewsCircle.attr("class", "grey grey-darkest");
+      offersCirle.attr("class", "grey grey-medium");
+      acceptedCircle.attr("class", "grey grey-lightest");
+    }
+
+    function handleMouseOutContacts(d, i) {  // Add interactivity
+      // Use D3 to select element, change color and size
+      interviewsCircle.attr("class", "green");
+      offersCirle.attr("class", "purple");
+      acceptedCircle.attr("class", "yellow");
+    }
+
+    interviewsCircle
+      .on("mouseover", handleMouseOverInterviews)
+      .on("mouseout", handleMouseOutInterviews);
+      d3.select("#interviews + text")
+      .on("mouseover", handleMouseOverInterviews)
+      .on("mouseout", handleMouseOutInterviews);
+
+    function handleMouseOverInterviews(d, i) {  // Add interactivity
+      // Use D3 to select element, change color and size
+      contactsCirle.attr("class", "grey grey-darkest");
+      offersCirle.attr("class", "grey grey-medium");
+      acceptedCircle.attr("class", "grey grey-lightest");
+    }
+
+    function handleMouseOutInterviews(d, i) {  // Add interactivity
+      // Use D3 to select element, change color and size
+      contactsCirle.attr("class", "orange");
+      offersCirle.attr("class", "purple");
+      acceptedCircle.attr("class", "yellow");
+    }
+
+    offersCirle
+      .on("mouseover", handleMouseOverOffers)
+      .on("mouseout", handleMouseOutOffers);
+      d3.select("#offers + text")
+      .on("mouseover", handleMouseOverOffers)
+      .on("mouseout", handleMouseOutOffers);
+
+    function handleMouseOverOffers(d, i) {  // Add interactivity
+      // Use D3 to select element, change color and size
+      interviewsCircle.attr("class", "grey grey-darkest");
+      contactsCirle.attr("class", "grey grey-medium");
+      acceptedCircle.attr("class", "grey grey-lightest");
+    }
+
+    function handleMouseOutOffers(d, i) {  // Add interactivity
+      // Use D3 to select element, change color and size
+      interviewsCircle.attr("class", "green");
+      contactsCirle.attr("class", "orange");
+      acceptedCircle.attr("class", "yellow");
+    }
+
+    acceptedCircle
+      .on("mouseover", handleMouseOverAccepted)
+      .on("mouseout", handleMouseOutAccepted);
+      d3.select("#accepted + text")
+      .on("mouseover", handleMouseOverAccepted)
+      .on("mouseout", handleMouseOutAccepted);
+
+    function handleMouseOverAccepted(d, i) {  // Add interactivity
+      // Use D3 to select element, change color and size
+      contactsCirle.attr("class", "grey grey-darkest");
+      offersCirle.attr("class", "grey grey-medium");
+      interviewsCircle.attr("class", "grey grey-lightest");
+    }
+
+    function handleMouseOutAccepted(d, i) {  // Add interactivity
+      // Use D3 to select element, change color and size
+      contactsCirle.attr("class", "orange");
+      offersCirle.attr("class", "purple");
+      interviewsCircle.attr("class", "green");
+    }
+  </script>
+</html>
