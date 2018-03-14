@@ -1,0 +1,30 @@
+{
+  "types": [
+    { 
+      "label": "airplane", 
+      "value":"16"
+    },
+    { 
+      "label": "train", 
+      "value":"19"
+    },
+    {
+      "label":"bus", 
+      "value":"8"
+    }
+  ],
+  "europe": [
+    {
+      "label":"airplane", 
+      "value": "14"
+    },
+    { 
+      "label": "train", 
+      "value":"10"
+    },
+    {
+      "label":"bus", 
+      "value":"5"
+    }
+  ]
+}

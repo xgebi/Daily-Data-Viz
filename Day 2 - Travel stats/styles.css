@@ -1,0 +1,17 @@
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  max-width: 44ch;
+  margin: 0 auto;
+}
+
+.charts {
+  width: 300px;
+  margin: 0 auto;
+}
